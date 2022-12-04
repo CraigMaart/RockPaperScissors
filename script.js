@@ -11,8 +11,6 @@ let computerResult;
 let i = 0;
 
 
-let test;
-
 function gameStart(option, playerSelection, computerSelection) {
   alert(`Welcome to Rock, Paper, Scissors`);
   alert(`Can you beat the computer?`);
@@ -28,19 +26,14 @@ function gameStart(option, playerSelection, computerSelection) {
   
 }
 
-
 function computerPlay(array, randomIndex, computerSelection){
   console.log("I am amazing")
   randomIndex = Math.floor(Math.random() * array.length)
   computerSelection = array[randomIndex]
-  console.log("computer has selected " +computerSelection)
+  console.log("computer has selected " +computerSelection) //Testing purposes
   return computerSelection
     
 }
-  
-
-
-
 
 function playRound(playerSelection, computerResult){
 
@@ -70,7 +63,6 @@ function playRound(playerSelection, computerResult){
   }
   else if((playerSelection === "Paper") && (computerResult === "Rock")){
     alert("You Win, Paper beats Rock")
-    console.log("Test 1")
     playerScore++;
     alert("Player has: " + playerScore + " point")
     round += i;
@@ -83,7 +75,6 @@ function playRound(playerSelection, computerResult){
   }
   else if((playerSelection === "Paper") && (computerResult === "Paper")){
     alert("It is a Draw")
-    console.log("Test 3")
     round += i;
   }
   else if((playerSelection === "Scissors") && (computerResult === "Paper")){
@@ -107,16 +98,11 @@ function playRound(playerSelection, computerResult){
   }
 }
 
-
-
-
 function playGame(playerSelection) {
   playerSelection = prompt("Rock, Paper, Scissors?");
   console.log("you are here now")
   alert("Player has choosen " + playerSelection)
   console.log("player has inserted " + playerSelection)
-  // computerResult = computerPlay(array, randomIndex, computerSelection)
-  // alert("Computer has chosen: " + computerResult)
   return playerSelection
 }
 
